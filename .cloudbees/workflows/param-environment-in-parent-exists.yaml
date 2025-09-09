@@ -16,12 +16,12 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "testvar: ${{ vars.testvar }}"
+          echo "testvar:"
       - name: Print testsec
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "testvar: ${{ secrets.testsec }}"
+          echo "testvar:"
   testparamenv:
     environment: ${{ inputs.targetenv }}
     steps:
@@ -29,9 +29,9 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "testvar: ${{ vars.testvar }}"
+          echo "testvar:"
       - name: Print testsec
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "testvar: ${{ secrets.testsec }}"
+          echo "testvar:"
